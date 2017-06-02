@@ -1,0 +1,42 @@
+GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+[1 of 1] Compiling Main             ( homework3.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> squarePairs 0 5
+[]
+*Main> squarePairs (-1) 5
+[]
+*Main> squarePairs 5 4
+[(4,16),(5,25),(6,36),(7,49),(8,64)]
+*Main> squarePairs 4 (-1)
+[(-1,1),(0,0),(1,1),(2,4)]
+*Main> 
+*Main> countDownBy 2 5 1
+[]
+*Main> countDownBy 17 2 (-3)
+[]
+*Main> countDownBy 17 2 3
+[17,14,11,8,5,2]
+*Main> countDownBy 16 2 3
+[16,13,10,7,4]
+*Main> 
+*Main> steps 7 3
+[[]]
+*Main> steps 3 7
+[[3],[3,4],[3,4,5],[3,4,5,6],[3,4,5,6,7]]
+*Main> steps (-3) 2
+[[-3],[-3,-2],[-3,-2,-1],[-3,-2,-1,0],[-3,-2,-1,0,1],[-3,-2,-1,0,1,2]]
+*Main> 
+*Main> indexChar (-2) 2 'w'
+""
+*Main> indexChar 7 2 'w'
+"w!wwwww"
+*Main> indexChar 7 11 'w'
+"wwwwwww"
+*Main> 
+*Main> diag (-1) 'w'
+[]
+*Main> diag 0 'w'
+[]
+*Main> diag 7 'w'
+["!wwwwww","w!wwwww","ww!wwww","www!www","wwww!ww","wwwww!w","wwwwww!"]
+*Main>

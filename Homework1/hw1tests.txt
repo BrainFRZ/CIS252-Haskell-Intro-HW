@@ -1,0 +1,22 @@
+between 6 7 9          -- should be False
+between 7 6 9          -- should be True
+between 7 9 6          -- should be False
+between 100 (-1) 5000  -- should be True
+between 100 100 5000   -- should be False
+
+xor False False     -- should be False
+xor True True       -- should be False
+xor True False      -- should be True
+xor False True      -- should be True
+
+
+convertDtoF 10    -- should be 200.0
+convertDtoF (-5)  -- should be 218.0
+convertDtoF 92.5  -- should be 101.0   (may appear as 100.99999)
+convertDtoF 150   -- should be 32.0
+
+
+convertFtoD 200      -- should be 10.0
+convertFtoD 218      -- should be -5.0
+convertFtoD 101      -- should be 92.5
+convertFtoD 32       -- should be 150.0

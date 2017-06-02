@@ -1,0 +1,43 @@
+GHCi, version 7.10.3: http://www.haskell.org/ghc/  :? for help
+Prelude> :l homework1
+[1 of 1] Compiling Main             ( homework1.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> between 6 7 9
+False
+*Main> between 7 6 9
+True
+*Main> between 7 9 6
+False
+*Main> between 100 (-1) 5000
+True
+*Main> between 100 100 5000
+False
+*Main>
+*Main> xor False False
+False
+*Main> xor True True
+False
+*Main> xor True False
+True
+*Main> xor False True
+True
+*Main>
+*Main> convertDtoF 10
+200.0
+*Main> convertDtoF (-5)
+218.0
+*Main> convertDtoF 92.5
+100.99999
+*Main> convertDtoF 150
+32.0
+*Main>
+*Main> convertFtoD 200
+10.0
+*Main> convertFtoD 218
+-5.0
+*Main> convertFtoD 101
+92.5
+*Main> convertFtoD 32
+150.0
+*Main> :q
+Leaving GHCi.

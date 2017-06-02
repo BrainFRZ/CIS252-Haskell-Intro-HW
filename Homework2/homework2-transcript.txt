@@ -1,0 +1,85 @@
+GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+Prelude> :l homework2
+[1 of 1] Compiling Main             ( homework2.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> compareChars 'a' 'a' 'a'
+"All equal"
+*Main> compareChars 'a' 'a' 'b'
+"Two match"
+*Main> compareChars 'a' 'b' 'a'
+"Two match"
+*Main> compareChars 'b' 'a' 'a'
+"Two match"
+*Main> compareChars 'a' 'b' 'c'
+"All distinct"
+*Main> combine 10 2 3
+-1
+*Main> combine 2 10 3
+-1
+*Main> combine 2 3 10
+-1
+*Main> combine 2 3 1
+231
+*Main> combine 0 0 0
+0
+*Main> combine 9 9 9
+999
+*Main> splitFloat 0
+(0,0.0)
+*Main> splitFloat 42
+(42,0.0)
+*Main> splitFloat (-42)
+(-42,0.0)
+*Main> splitFloat 3.78
+(3,0.78)
+*Main> splitFloat (-3.78)
+(-3,0.78)
+*Main> stdCost 0 2 False
+-1
+*Main> stdCost 1 (-1) False
+-1
+*Main> stdCost 1 1 False
+50
+*Main> stdCost 1 1 True
+25
+*Main> stdCost 2 1 False
+60
+*Main> stdCost 2 1 True
+35
+*Main> stdCost 1 5 False
+65
+*Main> stdCost 1 5 True
+40
+*Main> stdCost 2 5 False
+75
+*Main> stdCost 2 5 True
+50
+*Main> powerCost 0 1 True
+-1
+*Main> powerCost 1 (-1) False
+-1
+*Main> powerCost 1 1 False
+80
+*Main> powerCost 1 1 True
+55
+*Main> powerCost 2 1 False
+88
+*Main> powerCost 2 1 True
+63
+*Main> powerCost 1 13 False
+100
+*Main> powerCost 1 13 True
+75
+*Main> powerCost 2 13 False
+88
+*Main> powerCost 3 13 True
+71
+*Main> bestPlan 1 1
+"Standard"
+*Main> bestPlan 2 13
+"Power User"
+*Main> [(a,b) | a <- [1..50], b <- [1..50], (powerCost a b False) == (stdCost a b False)]
+[(1,6),(1,30),(16,1),(16,2),(16,3),(16,4)]
+*Main> bestPlan 1 6
+"Same cost"
+*Main>

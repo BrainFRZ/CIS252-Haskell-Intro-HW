@@ -1,0 +1,68 @@
+GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+[1 of 1] Compiling Main             ( homework4.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> myProduct []
+1
+*Main> myProduct [3,6,2,10]
+360
+*Main> myProduct [7,18,2,0,9]
+0
+*Main> myProduct [-3,6,2,10]
+-360
+*Main> myProduct [-3,6,-2,10]
+360
+*Main>
+*Main> shout ""
+""
+*Main> shout "Let's go, Orange!"
+"LET'S GO, ORANGE!"
+*Main> shout "3%23 26Os"
+"3%23 26OS"
+*Main>
+*Main> zap 'z' ""
+""
+*Main> zap 'z' "z"
+""
+*Main> zap 'x' "y"
+"y"
+*Main> zap 'a' "abbadaab"
+"bbdb"
+*Main>
+*Main> pairUp []
+[]
+*Main> pairUp [2]
+[(2,2)]
+*Main> pairUp [3,5,2,9]
+[(3,5),(2,9)]
+*Main> pairUp "abcde"
+[('a','b'),('c','d'),('e','e')]
+*Main>
+*Main> neighbors []
+[]
+*Main> neighbors [3,5,2,9]
+[(3,5),(5,2),(2,9)]
+*Main> neighbors "abcde"
+[('a','b'),('b','c'),('c','d'),('d','e')]
+*Main>
+*Main> let bag1 = [('z',1), ('e',2), ('k',1)]
+*Main> bag1
+[('z',1),('e',2),('k',1)]
+*Main> bagCount bag1
+4
+*Main> bagCount []
+0
+*Main> 
+*Main> addToBag 'y' bag1
+[('z',1),('e',2),('k',1),('y',1)]
+*Main> addToBag 'e' bag1
+[('z',1),('e',3),('k',1)]
+*Main> addToBag 'y' []
+[('y',1)]
+*Main> 
+*Main> removeFromBag 'e' bag1
+[('z',1),('e',1),('k',1)]
+*Main> removeFromBag 'a' bag1
+[('z',1),('e',2),('k',1)]
+*Main> removeFromBag 'k' bag1
+[('z',1),('e',2)]
+*Main>
